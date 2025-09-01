@@ -5,23 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sydney Electrical Pros - 24/7 Emergency Electrician in Sydney South West, Eastern Beaches & Inner City. Licensed, insured, residential & commercial via Woova.">
   <title>Sydney Electrical Pros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; }
+    h1, h2 { font-weight: 700; }
+    p, a { font-weight: 400; }
     header { background: #1e3a8a; color: white; padding: 1em 0; text-align: center; position: sticky; top: 0; }
     header .logo { font-size: 1.5em; font-weight: bold; }
     header nav { margin-top: 0.5em; }
     header nav a { color: white; text-decoration: none; margin: 0 0.5em; }
-    .hero { background: #e0e7ff url('hero-bg.jpg') no-repeat center/cover; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #1e3a8a; }
+    .hero { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), #e0e7ff url('hero-bg.jpg') no-repeat center/cover; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #1e3a8a; }
     .hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
     .hero p { font-size: 1.2em; }
     .hero .contact-btn { margin-top: 1em; padding: 0.5em 1em; background: #ef4444; color: white; text-decoration: none; border-radius: 5px; }
+    .hero .contact-btn:hover, button:hover { background: #dc2626; transition: background 0.3s; }
     .hero .phone { font-size: 1.5em; margin-top: 0.5em; }
     .services { padding: 2em; text-align: center; background: #f9fafb; }
     .services h2 { margin-bottom: 1em; color: #1e3a8a; }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; padding: 0 1em; }
     .service-item { padding: 1.5em; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .service-item:hover { transform: scale(1.05); transition: transform 0.3s; }
+    .service-item i { font-size: 2em; color: #ef4444; margin-bottom: 0.5em; }
     .service-item img { max-width: 100%; height: auto; margin-bottom: 1em; border-radius: 5px; }
+    .testimonials { padding: 2em; text-align: center; background: #f9fafb; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; }
+    .testimonial-item { padding: 1em; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-style: italic; }
     .contact { background: #1e3a8a; color: white; padding: 2em; text-align: center; }
     .contact h2 { margin-bottom: 1em; }
     .contact form { max-width: 100%; margin: 0 1em; }
@@ -29,7 +40,7 @@
     .contact button { padding: 0.5em 1em; background: #ef4444; color: white; border: none; border-radius: 5px; cursor: pointer; }
     .footer { background: #111827; color: white; padding: 1em 0; text-align: center; }
     .footer a { color: #ef4444; text-decoration: none; margin: 0 0.5em; }
-    .honeypot { display: none; } /* Added globally here */
+    .honeypot { display: none; }
 
     @media (max-width: 600px) {
       .hero { height: 200px; }
@@ -48,6 +59,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -60,10 +72,17 @@
   <div class="services" id="services">
     <h2>Our Services</h2>
     <div class="service-grid">
-      <div class="service-item"><img src="emergency-repair.jpg" alt="Emergency Repair"><br>Emergency Repairs</div>
-      <div class="service-item"><img src="rewiring.jpg" alt="Rewiring"><br>Rewiring</div>
-      <div class="service-item"><img src="safety-switch.jpg" alt="Safety Switch Install"><br>Safety Switch Installs</div>
-      <div class="service-item"><img src="commercial-electrical.jpg" alt="Commercial Electrical"><br>Commercial Electrical</div>
+      <div class="service-item"><i class="fas fa-bolt"></i><br>Emergency Repairs</div>
+      <div class="service-item"><i class="fas fa-tools"></i><br>Rewiring</div>
+      <div class="service-item"><i class="fas fa-shield-alt"></i><br>Safety Switch Installs</div>
+      <div class="service-item"><i class="fas fa-building"></i><br>Commercial Electrical</div>
+    </div>
+  </div>
+  <div class="testimonials" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-item">"Great emergency service via Woova—fixed our outage fast!" - John D.</div>
+      <div class="testimonial-item">"Reliable and trusted pros." - Sarah L.</div>
     </div>
   </div>
   <div class="contact" id="contact">
@@ -73,9 +92,10 @@
       <input type="text" placeholder="Name" name="name" required>
       <input type="email" placeholder="Email" name="email" required>
       <textarea placeholder="Message" name="message" rows="4" required></textarea>
-      <input type="text" name="_gotcha" class="honeypot"> <!-- Honeypot field -->
+      <input type="text" name="_gotcha" class="honeypot">
       <button type="submit">Send</button>
     </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13244.827908510475!2d151.2065!3d-33.8688!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUyJzA3LjciUyAxNTPCsDEyJzIzLjAiRQ!5e0!3m2!1sen!2sau!4v1696230000000!5m2!1sen!2sau" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
   <div class="footer">
     <p>&copy; 2025 Sydney Electrical Pros | <a href="#home">Home</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a></p>
