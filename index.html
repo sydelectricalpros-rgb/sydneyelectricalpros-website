@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sydney Electrical Pros - 24/7 Emergency Electrician in Sydney South West, Eastern Beaches & Inner City. Licensed, insured, residential & commercial via Woova.">
+  <meta name="keywords" content="emergency electrician Sydney, electrical services, Woova electrician">
+  <meta property="og:title" content="Sydney Electrical Pros">
+  <meta property="og:description" content="24/7 Emergency Electrician in Sydney">
+  <meta property="og:image" content="hero-bg.jpg">
   <title>Sydney Electrical Pros</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -23,16 +27,24 @@
     .hero .contact-btn { margin-top: 1em; padding: 0.5em 1em; background: #ef4444; color: white; text-decoration: none; border-radius: 5px; }
     .hero .contact-btn:hover, button:hover { background: #dc2626; transition: background 0.3s; }
     .hero .phone { font-size: 1.5em; margin-top: 0.5em; }
+    .about { padding: 2em; text-align: center; background: #f9fafb; }
+    .about h2 { margin-bottom: 1em; color: #1e3a8a; }
     .services { padding: 2em; text-align: center; background: #f9fafb; }
     .services h2 { margin-bottom: 1em; color: #1e3a8a; }
     .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; padding: 0 1em; }
     .service-item { padding: 1.5em; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     .service-item:hover { transform: scale(1.05); transition: transform 0.3s; }
     .service-item i { font-size: 2em; color: #ef4444; margin-bottom: 0.5em; }
-    .service-item img { max-width: 100%; height: auto; margin-bottom: 1em; border-radius: 5px; }
+    .service-item img { max-width: 100%; height: auto; margin-bottom: 1em; border-radius: 5px; loading: lazy; }
     .testimonials { padding: 2em; text-align: center; background: #f9fafb; }
     .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1em; }
     .testimonial-item { padding: 1em; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-style: italic; }
+    .faq { padding: 2em; text-align: left; background: #f9fafb; }
+    .faq h2 { text-align: center; margin-bottom: 1em; color: #1e3a8a; }
+    .faq-item { margin-bottom: 1em; }
+    .faq-question { width: 100%; padding: 1em; background: #e0e7ff; border: none; cursor: pointer; text-align: left; }
+    .faq-answer { padding: 1em; background: white; display: none; }
+    .faq-item.active .faq-answer { display: block; }
     .contact { background: #1e3a8a; color: white; padding: 2em; text-align: center; }
     .contact h2 { margin-bottom: 1em; }
     .contact form { max-width: 100%; margin: 0 1em; }
@@ -40,6 +52,8 @@
     .contact button { padding: 0.5em 1em; background: #ef4444; color: white; border: none; border-radius: 5px; cursor: pointer; }
     .footer { background: #111827; color: white; padding: 1em 0; text-align: center; }
     .footer a { color: #ef4444; text-decoration: none; margin: 0 0.5em; }
+    .social { margin-top: 1em; }
+    .social a { color: #ef4444; margin: 0 1em; font-size: 1.2em; }
     .honeypot { display: none; }
 
     @media (max-width: 600px) {
@@ -58,16 +72,22 @@
     <div class="logo">Sydney Electrical Pros</div>
     <nav>
       <a href="#home">Home</a>
+      <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
   <div class="hero" id="home">
     <h1>24/7 Emergency Electrician</h1>
-    <p>Serving Sydney South West, Eastern Beaches & Inner City via Woova. Licensed & Insured.</p>
+    <p>Serving Sydney South West, Eastern Beaches & Inner City. Licensed & Insured.</p>
     <a href="#contact" class="contact-btn">Book Now</a>
     <div class="phone">Call: 0477 947 895</div>
+  </div>
+  <div class="about" id="about">
+    <h2>About Us</h2>
+    <p>We are licensed and insured electricians providing 24/7 emergency services across Sydney South West, Eastern Beaches, and Inner City. With years of experience, we specialize in residential and commercial work, ensuring efficiency and compliance.</p>
   </div>
   <div class="services" id="services">
     <h2>Our Services</h2>
@@ -81,13 +101,24 @@
   <div class="testimonials" id="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="testimonial-grid">
-      <div class="testimonial-item">"Great emergency service via Woova—fixed our outage fast!" - John D.</div>
+      <div class="testimonial-item">"Great emergency service—fixed our outage fast!" - John D.</div>
       <div class="testimonial-item">"Reliable and trusted pros." - Sarah L.</div>
+    </div>
+  </div>
+  <div class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">What's your emergency response time?</button>
+      <div class="faq-answer">We aim for under 1 hour in Sydney South West, Eastern Beaches, and Inner City—call Woova at 0477 947 895 for immediate help.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Are you licensed and insured?</button>
+      <div class="faq-answer">Yes, fully licensed and insured for residential and commercial work.</div>
     </div>
   </div>
   <div class="contact" id="contact">
     <h2>Contact Us</h2>
-    <p>Available 24/7 via Woova. Reach out for fast, reliable service!</p>
+    <p>Available 24/7. Reach out for fast, reliable service!</p>
     <form action="https://formspree.io/f/xzzavvpl" method="POST">
       <input type="text" placeholder="Name" name="name" required>
       <input type="email" placeholder="Email" name="email" required>
@@ -98,7 +129,15 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13244.827908510475!2d151.2065!3d-33.8688!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUyJzA3LjciUyAxNTPCsDEyJzIzLjAiRQ!5e0!3m2!1sen!2sau!4v1696230000000!5m2!1sen!2sau" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </div>
   <div class="footer">
-    <p>&copy; 2025 Sydney Electrical Pros | <a href="#home">Home</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a></p>
+    <p>&copy; 2025 Sydney Electrical Pros | <a href="#home">Home</a> | <a href="#services">Services</a> | <a href="#contact">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    <div class="social">
+      <a href="https://www.instagram.com/sydneyelectricalpros/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
   </div>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => button.parentElement.classList.toggle('active'));
+    });
+  </script>
 </body>
 </html>
