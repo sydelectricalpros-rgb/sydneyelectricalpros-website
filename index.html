@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -45,42 +6,41 @@
   <meta name="description" content="Sydney Electrical Pros - 24/7 Emergency Electrician in Sydney South West, Eastern Beaches & Inner City. Licensed, insured, residential & commercial via Woova.">
   <title>Sydney Electrical Pros</title>
   <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-  header { background: #1e3a8a; color: white; padding: 1em 0; text-align: center; position: sticky; top: 0; }
-  header .logo { font-size: 1.5em; font-weight: bold; }
-  header nav { margin-top: 0.5em; }
-  header nav a { color: white; text-decoration: none; margin: 0 0.5em; }
-  .hero { background: #e0e7ff url('hero-bg.jpg') no-repeat center/cover; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #1e3a8a; }
-  .hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-  .hero p { font-size: 1.2em; }
-  .hero .contact-btn { margin-top: 1em; padding: 0.5em 1em; background: #ef4444; color: white; text-decoration: none; border-radius: 5px; }
-  .hero .phone { font-size: 1.5em; margin-top: 0.5em; }
-  .services { padding: 2em; text-align: center; background: #f9fafb; }
-  .services h2 { margin-bottom: 1em; color: #1e3a8a; }
-  .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; padding: 0 1em; }
-  .service-item { padding: 1.5em; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-  .service-item img { max-width: 100%; height: auto; margin-bottom: 1em; border-radius: 5px; }
-  .contact { background: #1e3a8a; color: white; padding: 2em; text-align: center; }
-  .contact h2 { margin-bottom: 1em; }
-  .contact form { max-width: 100%; margin: 0 1em; }
-  .contact input, .contact textarea { width: 100%; margin-bottom: 1em; padding: 0.5em; border: none; border-radius: 5px; }
-  .contact button { padding: 0.5em 1em; background: #ef4444; color: white; border: none; border-radius: 5px; cursor: pointer; }
-  .footer { background: #111827; color: white; padding: 1em 0; text-align: center; }
-  .footer a { color: #ef4444; text-decoration: none; margin: 0 0.5em; }
-  .honeypot { display: none; } /* Add this here for global hiding */
-        <input type="text" name="_gotcha" class="honeypot">
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    header { background: #1e3a8a; color: white; padding: 1em 0; text-align: center; position: sticky; top: 0; }
+    header .logo { font-size: 1.5em; font-weight: bold; }
+    header nav { margin-top: 0.5em; }
+    header nav a { color: white; text-decoration: none; margin: 0 0.5em; }
+    .hero { background: #e0e7ff url('hero-bg.jpg') no-repeat center/cover; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #1e3a8a; }
+    .hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+    .hero p { font-size: 1.2em; }
+    .hero .contact-btn { margin-top: 1em; padding: 0.5em 1em; background: #ef4444; color: white; text-decoration: none; border-radius: 5px; }
+    .hero .phone { font-size: 1.5em; margin-top: 0.5em; }
+    .services { padding: 2em; text-align: center; background: #f9fafb; }
+    .services h2 { margin-bottom: 1em; color: #1e3a8a; }
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; padding: 0 1em; }
+    .service-item { padding: 1.5em; background: white; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .service-item img { max-width: 100%; height: auto; margin-bottom: 1em; border-radius: 5px; }
+    .contact { background: #1e3a8a; color: white; padding: 2em; text-align: center; }
+    .contact h2 { margin-bottom: 1em; }
+    .contact form { max-width: 100%; margin: 0 1em; }
+    .contact input, .contact textarea { width: 100%; margin-bottom: 1em; padding: 0.5em; border: none; border-radius: 5px; }
+    .contact button { padding: 0.5em 1em; background: #ef4444; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .footer { background: #111827; color: white; padding: 1em 0; text-align: center; }
+    .footer a { color: #ef4444; text-decoration: none; margin: 0 0.5em; }
+    .honeypot { display: none; } /* Added globally here */
 
-  @media (max-width: 600px) {
-    .hero { height: 200px; }
-    .hero h1 { font-size: 1.5em; }
-    .hero p { font-size: 1em; }
-    .hero .phone { font-size: 1em; }
-    .service-grid { grid-template-columns: 1fr; padding: 0; }
-    header nav a { margin: 0 0.3em; }
-    .contact form { margin: 0; }
-  }
-</style>
+    @media (max-width: 600px) {
+      .hero { height: 200px; }
+      .hero h1 { font-size: 1.5em; }
+      .hero p { font-size: 1em; }
+      .hero .phone { font-size: 1em; }
+      .service-grid { grid-template-columns: 1fr; padding: 0; }
+      header nav a { margin: 0 0.3em; }
+      .contact form { margin: 0; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -109,28 +69,12 @@
   <div class="contact" id="contact">
     <h2>Contact Us</h2>
     <p>Available 24/7 via Woova. Reach out for fast, reliable service!</p>
-    <form>
-    <form action="https://formspree.io/f/xzzavvpl/{your-form-id}" method="POST">
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="4" required></textarea>
-
-  <!-- Optional: Hidden field for email subject -->
-  <input type="hidden" name="_subject" value="New Contact Form Submission">
-
-  <!-- Optional: Honeypot for spam protection (hide with CSS: display: none;) -->
-  <input type="text" name="_gotcha" style="display: none;">
-
-  <!-- Optional: Redirect after submit -->
-  <input type="hidden" name="_next" value="https://www.sydneyelectricalpros.com.au/thanks.html">
-
-  <button type="submit">Send</button>
-</form>
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+      <input type="text" placeholder="Name" name="name" required>
+      <input type="email" placeholder="Email" name="email" required>
+      <textarea placeholder="Message" name="message" rows="4" required></textarea>
+      <input type="text" name="_gotcha" class="honeypot"> <!-- Honeypot field -->
+      <button type="submit">Send</button>
     </form>
   </div>
   <div class="footer">
