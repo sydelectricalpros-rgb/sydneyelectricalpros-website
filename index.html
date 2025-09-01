@@ -21,11 +21,11 @@
     header .logo { font-size: 1.5em; font-weight: bold; }
     header nav { margin-top: 0.5em; }
     header nav a { color: white; text-decoration: none; margin: 0 0.5em; }
-    .hero { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), #FF9900 url('hero-bg.jpg') no-repeat center/cover; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white; animation: fadeIn 1s ease-in; }
+    .hero { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), #e0e7ff url('hero-bg.jpg') no-repeat center/cover; height: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #FF9900; animation: fadeIn 1s ease-in; }
     .hero h1 { font-size: 2.5em; margin-bottom: 0.5em; }
     .hero p { font-size: 1.2em; }
-    .hero .contact-btn { margin-top: 1em; padding: 0.5em 1em; background: #333; color: white; text-decoration: none; border-radius: 5px; }
-    .hero .contact-btn:hover, button:hover { background: #666; transition: background 0.3s; }
+    .hero .contact-btn { margin-top: 1em; padding: 0.5em 1em; background: #FF9900; color: white; text-decoration: none; border-radius: 5px; }
+    .hero .contact-btn:hover, button:hover { background: #dc2626; transition: background 0.3s; }
     .hero .phone { font-size: 1.5em; margin-top: 0.5em; }
     .about { padding: 2em; text-align: center; background: #f9fafb; animation: fadeIn 1s ease-in 0.5s forwards; opacity: 0; }
     .about h2 { margin-bottom: 1em; color: #FF9900; }
@@ -42,14 +42,14 @@
     .faq { padding: 2em; text-align: left; background: #f9fafb; animation: fadeIn 1s ease-in 2s forwards; opacity: 0; }
     .faq h2 { text-align: center; margin-bottom: 1em; color: #FF9900; }
     .faq-item { margin-bottom: 1em; }
-    .faq-question { width: 100%; padding: 1em; background: #f9fafb; border: none; cursor: pointer; text-align: left; }
+    .faq-question { width: 100%; padding: 1em; background: #e0e7ff; border: none; cursor: pointer; text-align: left; }
     .faq-answer { padding: 1em; background: white; display: none; }
     .faq-item.active .faq-answer { display: block; }
     .contact { background: #FF9900; color: white; padding: 2em; text-align: center; animation: fadeIn 1s ease-in 2.5s forwards; opacity: 0; }
     .contact h2 { margin-bottom: 1em; }
     .contact form { max-width: 100%; margin: 0 1em; }
     .contact input, .contact textarea { width: 100%; margin-bottom: 1em; padding: 0.5em; border: none; border-radius: 5px; }
-    .contact button { padding: 0.5em 1em; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .contact button { padding: 0.5em 1em; background: #FF9900; color: white; border: none; border-radius: 5px; cursor: pointer; }
     .footer { background: #111827; color: white; padding: 1em 0; text-align: center; animation: fadeIn 1s ease-in 3s forwards; opacity: 0; }
     .footer a { color: #FF9900; text-decoration: none; margin: 0 0.5em; }
     .social { margin-top: 1em; }
@@ -129,12 +129,28 @@
   <div class="faq" id="faq">
     <h2>Frequently Asked Questions</h2>
     <div class="faq-item">
-      <button class="faq-question">What's your emergency response time?</button>
-      <div class="faq-answer">We aim for under 1 hour in Sydney South West, Eastern Beaches, and Inner City—call Woova at 0477 947 895 for immediate help.</div>
+      <button class="faq-question">What areas of Sydney do you service?</button>
+      <div class="faq-answer">We service Sydney South West, Eastern Beaches, and Inner City, including suburbs like Bondi, Coogee, Randwick, and more.</div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">Are you licensed and insured?</button>
-      <div class="faq-answer">Yes, fully licensed and insured for residential and commercial work.</div>
+      <button class="faq-question">Do you offer after-hours, weekend, evening, and 24-hour emergency service?</button>
+      <div class="faq-answer">Yes, we provide 24/7 emergency services, including after-hours, weekends, and evenings—call Woova at 0477 947 895 anytime.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">My power is out—should I call you or my energy provider?</button>
+      <div class="faq-answer">For outages affecting your whole area, contact your energy provider first. If it's isolated to your property, call us for immediate diagnosis and repair.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Are your electricians licensed and insured?</button>
+      <div class="faq-answer">Yes, fully licensed (251659C) and insured for residential and commercial work.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you work on older homes and heritage buildings?</button>
+      <div class="faq-answer">Absolutely, we specialize in sensitive rewiring and upgrades for older homes and heritage buildings, ensuring compliance with regulations.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What’s the next step? How do I get in touch?</button>
+      <div class="faq-answer">Call Woova at 0477 947 895, submit the contact form below, or book now for a free quote—we'll respond promptly.</div>
     </div>
   </div>
   <div class="contact" id="contact">
