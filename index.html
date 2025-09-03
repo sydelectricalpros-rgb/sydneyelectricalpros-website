@@ -104,12 +104,32 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
-  <div class="hero" id="home">
-    <h1>24/7 Emergency Electrician</h1>
-    <p>Serving Sydney South West, Eastern Beaches & Inner City. Licensed & Insured.</p>
-    <a href="#contact" class="contact-btn">Book Now</a>
-    <div class="phone">Call: 0477 947 895</div>
-  </div>
+ <div class="hero" id="home" style="background-image: url('hero-bg.jpg');">
+  <h1>24/7 Emergency Electrician</h1>
+  <p>Serving Sydney South West, Eastern Beaches & Inner City. Licensed & Insured.</p>
+  <a href="#contact" class="contact-btn">Book Now</a>
+  <div class="phone">Call: 0477 947 895</div>
+</div>
+
+<style>
+  .hero {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero-bg.jpg') no-repeat center/cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FF9900;
+    animation: fadeIn 1s ease-in;
+    background-size: cover;
+    background-position: center;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  }
+</style>
 <div class="about" id="about">
   <h2>About Us</h2>
   <p style="font-size: 1.2em; margin-bottom: 1em;">We are Sydney Electrical Pros, a trusted team of licensed (251659C) and insured electricians dedicated to providing top-quality electrical services across Sydney South West, Eastern Beaches, and Inner City.</p>
