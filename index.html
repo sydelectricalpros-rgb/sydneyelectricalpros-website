@@ -14,7 +14,7 @@
   <meta property="og:description" content="Local Level 2 electricians in South West Sydney. 12-month workmanship guarantee, upfront pricing, available 24/7. Call 0477 947 895.">
   <meta property="og:url" content="https://sydneyelectricalpros.com.au">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="Main.png">
+  <meta property="og:image" content="hero.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -136,7 +136,7 @@
     .hero {
       position: relative;
       min-height: 600px;
-      background: url('Main.png') no-repeat center center / cover;
+      background: url('hero.png') no-repeat center center / cover;
       display: flex;
       align-items: center;
     }
@@ -390,7 +390,7 @@
       width: 100%;
       height: 420px;
       border-radius: 8px;
-      background: url('Main.png') no-repeat center center / cover;
+      background: url('team.png') no-repeat center center / cover;
       box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     }
     .about-text { background: var(--orange); padding: 38px 34px; border-radius: 10px; box-shadow: 0 10px 30px rgba(255,153,0,0.25); }
@@ -452,6 +452,32 @@
     .why-item .why-icon i { color: var(--orange); font-size: 22px; }
     .why-item h3 { font-size: 17px; color: var(--navy); margin-bottom: 6px; font-weight: 800; }
     .why-item p { font-size: 14px; color: var(--text-light); line-height: 1.6; }
+
+    /* TRUST BANNER */
+    .trust-banner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 380px;
+    }
+    .trust-banner-img { background: url('customer.png') no-repeat center center / cover; min-height: 320px; }
+    .trust-banner-text { background: var(--navy); padding: 56px 48px; display: flex; flex-direction: column; justify-content: center; }
+    .trust-banner-text .section-label { color: var(--orange); }
+    .trust-banner-text h2 { color: #fff; font-size: 30px; font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+    .trust-banner-text p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
+    .trust-banner-text .banner-btn {
+      align-self: flex-start;
+      background: var(--orange);
+      color: #fff;
+      padding: 14px 30px;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      transition: background 0.2s;
+    }
+    .trust-banner-text .banner-btn:hover { background: var(--orange-dark); }
 
     /* REVIEWS */
     .reviews-bg { background: var(--light); }
@@ -561,6 +587,9 @@
 
     /* MOBILE */
     @media (max-width: 960px) {
+      .trust-banner { grid-template-columns: 1fr; }
+      .trust-banner-img { min-height: 240px; }
+      .trust-banner-text { padding: 40px 24px; }
       .topbar { padding: 8px 20px; flex-direction: column; gap: 4px; font-size: 12px; text-align: center; }
       nav { padding: 0 20px; }
       .nav-links { display: none; }
@@ -819,6 +848,17 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- TRUST BANNER -->
+<div class="trust-banner">
+  <div class="trust-banner-img"></div>
+  <div class="trust-banner-text">
+    <span class="section-label">Friendly, Honest Service</span>
+    <h2>We Explain Everything in Plain English</h2>
+    <p>No jargon, no pressure. We'll talk you through what needs doing and why, give you an upfront price, and let you decide. It's your home — you should understand the work going into it.</p>
+    <a href="#contact" class="banner-btn">Get a Free Quote →</a>
   </div>
 </div>
 
