@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="main.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <script type="application/ld+json">
@@ -48,9 +48,12 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"What areas of Sydney do you service?","acceptedAnswer":{"@type":"Answer","text":"We service Sydney South West, Eastern Beaches, and Inner City including Bondi, Coogee, Randwick, Parramatta, Liverpool, Newtown and more."}},
-      {"@type":"Question","name":"Do you offer 24-hour emergency electrical service?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide 24/7 emergency electrical services. Call 0477 947 895 anytime."}},
-      {"@type":"Question","name":"Are your electricians licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"Yes, fully licensed (251659C) and insured for all residential and commercial work in Sydney."}}
+      {"@type":"Question","name":"How much does an electrician cost in Sydney?","acceptedAnswer":{"@type":"Answer","text":"At Sydney Electrical Pros we give you an upfront fixed price before any work begins. Call 0477 947 895 for a free, no-obligation quote."}},
+      {"@type":"Question","name":"Do you offer 24-hour emergency electrician services in Sydney?","acceptedAnswer":{"@type":"Answer","text":"Yes, we are available 24 hours a day, 7 days a week including nights, weekends and public holidays. Call 0477 947 895."}},
+      {"@type":"Question","name":"What areas of Sydney do you cover?","acceptedAnswer":{"@type":"Answer","text":"We service all of Sydney including Sydney South West, Eastern Beaches and Inner City - Bondi, Coogee, Randwick, Parramatta, Liverpool, Newtown and more."}},
+      {"@type":"Question","name":"Are your electricians licensed and insured?","acceptedAnswer":{"@type":"Answer","text":"Yes, fully licensed (251659C) and insured for all residential and commercial work in Sydney."}},
+      {"@type":"Question","name":"How much does it cost to upgrade a switchboard in Sydney?","acceptedAnswer":{"@type":"Answer","text":"Switchboard upgrade costs depend on your home, but we always provide a fixed quote upfront. Call us for a free quote."}},
+      {"@type":"Question","name":"Can you install an EV charger at my home?","acceptedAnswer":{"@type":"Answer","text":"Yes, we install home EV chargers across Sydney and ensure they are safely installed and fully compliant."}}
     ]
   }
   </script>
@@ -68,7 +71,7 @@
       --border: #e2e5ec;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; color: var(--text); background: var(--white); }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); }
     h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
 
     /* TOP BAR */
@@ -276,7 +279,7 @@
       border: 1px solid var(--border);
       border-radius: 5px;
       font-size: 14px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: var(--text);
       background: var(--light);
     }
@@ -388,10 +391,13 @@
       background: url('main.png') no-repeat center center / cover;
       box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     }
-    .about-text p { color: #555; line-height: 1.8; font-size: 15px; margin-bottom: 14px; }
-    .about-text a { color: var(--orange); font-weight: 700; text-decoration: none; }
+    .about-text { background: var(--orange); padding: 38px 34px; border-radius: 10px; box-shadow: 0 10px 30px rgba(255,153,0,0.25); }
+    .about-text .section-label { color: var(--navy); }
+    .about-text .section-title { color: #fff; }
+    .about-text p { color: #fff; line-height: 1.8; font-size: 15px; margin-bottom: 14px; }
+    .about-text a { color: var(--navy); font-weight: 700; text-decoration: underline; }
     .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 26px; }
-    .stat-box { background: var(--light); padding: 18px; border-left: 4px solid var(--orange); border-radius: 4px; }
+    .stat-box { background: #fff; padding: 18px; border-left: 4px solid var(--navy); border-radius: 4px; }
     .stat-box .num { font-size: 28px; font-weight: 900; color: var(--navy); font-family: 'Montserrat', sans-serif; }
     .stat-box .num span { color: var(--orange); }
     .stat-box .lbl { font-size: 12px; color: var(--text-light); margin-top: 4px; }
@@ -501,7 +507,7 @@
       border: 1px solid var(--border);
       border-radius: 5px;
       font-size: 14px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       color: var(--text);
       background: var(--light);
     }
@@ -669,10 +675,10 @@
       <div class="about-img"></div>
       <div class="about-text">
         <span class="section-label">About Us</span>
-        <h2 class="section-title">Sydney Electricians You Can Trust</h2>
-        <p>We are Sydney Electrical Pros — licensed (251659C) and insured electricians with over 10 years of experience serving Sydney homes and businesses.</p>
-        <p>We cover emergency repairs, rewiring, safety switch installs, switchboard upgrades, EV charger installation and more — across all of Sydney.</p>
-        <p>Whether it's a power outage at midnight or a big renovation job — we're ready to help. Call <a href="tel:0477947895">0477 947 895</a> anytime.</p>
+        <h2 class="section-title">Your Local Sydney Electrician You Can Trust</h2>
+        <p>Sydney Electrical Pros is a fully licensed (251659C) and insured electrical company with over 10 years of experience serving homes and businesses right across Sydney. From the Eastern Beaches to the South West and Inner City, we're the local electricians Sydney homeowners call first.</p>
+        <p>We handle everything — emergency electrical repairs, switchboard upgrades, house rewiring, safety switch installation, EV charger installation, LED downlights, smoke alarms and more. No job is too big or too small.</p>
+        <p>Need an emergency electrician in Sydney? Whether it's a power outage at midnight or a full renovation, we're ready 24/7. Call <a href="tel:0477947895">0477 947 895</a> for a fast, free quote.</p>
         <div class="about-stats">
           <div class="stat-box"><div class="num">10<span>+</span></div><div class="lbl">Years in Sydney</div></div>
           <div class="stat-box"><div class="num">500<span>+</span></div><div class="lbl">Jobs Completed</div></div>
@@ -688,8 +694,8 @@
 <div class="services-bg" id="services">
   <div class="section-inner">
     <span class="section-label">What We Do</span>
-    <h2 class="section-title">Our Electrical Services</h2>
-    <p class="section-sub">From emergency repairs to full installations — we cover it all across Sydney.</p>
+    <h2 class="section-title">Electrical Services Across Sydney</h2>
+    <p class="section-sub">From 24/7 emergency electrical repairs to switchboard upgrades and EV charger installation — our licensed Sydney electricians do it all.</p>
     <div class="services-grid">
       <div class="service-card"><i class="fas fa-bolt"></i><h3>Emergency Repairs</h3></div>
       <div class="service-card"><i class="fas fa-tools"></i><h3>Rewiring</h3></div>
@@ -715,8 +721,8 @@
 <div id="areas">
   <div class="section-inner">
     <span class="section-label">Where We Work</span>
-    <h2 class="section-title">We Cover All of Sydney</h2>
-    <p class="section-sub">Serving Sydney South West, Eastern Beaches, Inner City and surrounding suburbs.</p>
+    <h2 class="section-title">Sydney Suburbs We Service</h2>
+    <p class="section-sub">Looking for an electrician near you? We provide electrical services across Sydney South West, the Eastern Beaches, Inner City and all surrounding suburbs.</p>
     <div class="areas-grid">
       <div class="area-pill">Bondi</div>
       <div class="area-pill">Coogee</div>
@@ -772,32 +778,44 @@
   <div class="section-inner">
     <div style="text-align:center; margin-bottom:40px;">
       <span class="section-label">FAQ</span>
-      <h2 class="section-title">Common Questions</h2>
+      <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
     <div class="faq-wrap">
       <div class="faq-item">
-        <button class="faq-question">What areas of Sydney do you service?</button>
-        <div class="faq-answer">We service Sydney South West, Eastern Beaches, and Inner City — including Bondi, Coogee, Randwick, Parramatta, Liverpool, Newtown, Surry Hills, Cronulla and more.</div>
+        <button class="faq-question">How much does an electrician cost in Sydney?</button>
+        <div class="faq-answer">Most Sydney electricians charge a call-out fee plus an hourly rate, but at Sydney Electrical Pros we give you an upfront fixed price before any work begins — so there are no surprises. Call 0477 947 895 or fill out the quote form for a free, no-obligation quote.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Do you offer 24-hour emergency electrical service?</button>
-        <div class="faq-answer">Yes, we're available 24/7 including after hours, weekends and public holidays. Call 0477 947 895 anytime.</div>
+        <button class="faq-question">Do you offer 24-hour emergency electrician services in Sydney?</button>
+        <div class="faq-answer">Yes. We're available 24 hours a day, 7 days a week — including nights, weekends and public holidays. If you have an electrical emergency anywhere in Sydney, call 0477 947 895 and we'll respond fast.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">My power is out — should I call you or my energy provider?</button>
-        <div class="faq-answer">If the outage is affecting your whole street, contact your energy provider first. If it's just your property, call us for a fast diagnosis and fix.</div>
+        <button class="faq-question">What areas of Sydney do you cover?</button>
+        <div class="faq-answer">We service all of Sydney — including Sydney South West, the Eastern Beaches and Inner City. Popular suburbs include Bondi, Coogee, Randwick, Parramatta, Liverpool, Campbelltown, Newtown, Surry Hills, Cronulla, Penrith, Chatswood and Manly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">My power has gone out — what should I do?</button>
+        <div class="faq-answer">First check if your neighbours have power too. If the whole street is out, it's a network issue — contact your energy provider. If it's just your property, it could be a tripped safety switch or a fault. Call us on 0477 947 895 and we'll diagnose and fix it fast.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Are your electricians licensed and insured?</button>
-        <div class="faq-answer">Yes — fully licensed (251659C) and insured for all residential and commercial work across Sydney.</div>
+        <div class="faq-answer">Yes — Sydney Electrical Pros is fully licensed (Licence No. 251659C) and insured for all residential and commercial electrical work across Sydney. All work is carried out to Australian safety standards.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">How much does an electrician cost in Sydney?</button>
-        <div class="faq-answer">We give you an upfront fixed price before we start — no surprises. Fill out the quote form or call 0477 947 895 for a free quote.</div>
+        <button class="faq-question">How much does it cost to upgrade a switchboard in Sydney?</button>
+        <div class="faq-answer">Switchboard upgrade costs depend on your home's size and wiring, but we always provide a fixed quote upfront. A modern switchboard with safety switches protects your home and is often needed for solar, EV chargers or older properties. Call us for a free quote.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Do you work on older homes and heritage buildings?</button>
-        <div class="faq-answer">Absolutely. We're experienced with rewiring and upgrades in older homes and heritage buildings, done to full safety standards.</div>
+        <button class="faq-question">Can you install an EV charger at my home?</button>
+        <div class="faq-answer">Absolutely. We install home EV chargers across Sydney and can advise on the right charger for your vehicle and switchboard. We'll make sure it's safely installed and fully compliant.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you do both residential and commercial electrical work?</button>
+        <div class="faq-answer">Yes. We work on homes, rental properties, offices, shops and small commercial sites across Sydney — from a single power point to a full fit-out or rewire.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How quickly can you get to me?</button>
+        <div class="faq-answer">For emergencies we aim to get to you as fast as possible, often the same day. Call 0477 947 895 and we'll let you know our soonest available time.</div>
       </div>
     </div>
   </div>
