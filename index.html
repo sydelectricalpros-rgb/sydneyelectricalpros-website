@@ -148,13 +148,13 @@
     .hero-inner {
       position: relative;
       z-index: 2;
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 60px 50px;
       width: 100%;
       display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 40px;
+      grid-template-columns: 1fr 400px;
+      gap: 90px;
       align-items: center;
     }
 
@@ -373,12 +373,15 @@
     .section-inner { max-width: 1200px; margin: 0 auto; padding: 70px 40px; }
     .section-label {
       display: inline-block;
-      color: var(--orange);
+      background: var(--navy);
+      color: #fff;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
+      padding: 7px 16px;
+      border-radius: 5px;
       font-family: 'Montserrat', sans-serif;
     }
     .section-title { font-size: 36px; font-weight: 900; color: var(--navy); line-height: 1.1; margin-bottom: 12px; }
@@ -394,7 +397,7 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     }
     .about-text { background: var(--orange); padding: 38px 34px; border-radius: 10px; box-shadow: 0 10px 30px rgba(255,153,0,0.25); }
-    .about-text .section-label { color: var(--navy); }
+    .about-text .section-label { background: var(--navy); color: #fff; }
     .about-text .section-title { color: #fff; }
     .about-text p { color: #fff; line-height: 1.8; font-size: 15px; margin-bottom: 14px; }
     .about-text a { color: var(--navy); font-weight: 700; text-decoration: underline; }
@@ -462,7 +465,7 @@
     }
     .trust-banner-img { background: url('customer.png') no-repeat center center / cover; min-height: 320px; }
     .trust-banner-text { background: var(--navy); padding: 56px 48px; display: flex; flex-direction: column; justify-content: center; }
-    .trust-banner-text .section-label { color: var(--orange); }
+    .trust-banner-text .section-label { background: var(--orange); color: #fff; }
     .trust-banner-text h2 { color: #fff; font-size: 30px; font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
     .trust-banner-text p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.8; margin-bottom: 24px; }
     .trust-banner-text .banner-btn {
@@ -593,7 +596,7 @@
       .topbar { padding: 8px 20px; flex-direction: column; gap: 4px; font-size: 12px; text-align: center; }
       nav { padding: 0 20px; }
       .nav-links { display: none; }
-      .hero-inner { grid-template-columns: 1fr; padding: 36px 20px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 28px; padding: 36px 20px; }
       .hero h1 { font-size: 32px; }
       .hero-form { margin-top: 10px; }
       .about-grid { grid-template-columns: 1fr; }
@@ -746,7 +749,7 @@
     <p class="section-sub">From emergency repairs to switchboard upgrades, EV chargers and Level 2 work — whatever you need, we'll sort it properly the first time.</p>
     <div class="services-grid">
       <div class="service-card"><i class="fas fa-bolt"></i><h3>Emergency Repairs</h3></div>
-      <div class="service-card"><i class="fas fa-plug-circle-bolt"></i><h3>Level 2 ASP Work</h3></div>
+      <div class="service-card"><i class="fas fa-hard-hat"></i><h3>Level 2 ASP Work</h3></div>
       <div class="service-card"><i class="fas fa-tools"></i><h3>Rewiring</h3></div>
       <div class="service-card"><i class="fas fa-shield-alt"></i><h3>Safety Switch Installs</h3></div>
       <div class="service-card"><i class="fas fa-building"></i><h3>Commercial Electrical</h3></div>
