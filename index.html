@@ -676,22 +676,53 @@
       <h3>GET A FREE QUOTE</h3>
       <p class="form-sub">Fill in a few details and we'll call you back within <span>30 minutes</span></p>
       <form action="https://formspree.io/f/xzzavvpl" method="POST">
-        <input type="text" name="name" placeholder="Your Name *" required>
-        <input type="tel" name="phone" placeholder="Phone Number *" required>
-        <input type="text" name="address" placeholder="Suburb">
-        <select name="service">
-          <option value="" disabled selected>What do you need help with?</option>
-          <option>Emergency Repair</option>
-          <option>Switchboard Upgrade / Relocation</option>
-          <option>EV Charger Installation</option>
-          <option>Rewiring</option>
-          <option>Safety Switch Install</option>
-          <option>Lighting / LED Downlights</option>
-          <option>Power Points</option>
-          <option>Smoke Alarms</option>
-          <option>Level 2 Work</option>
-          <option>General Enquiry</option>
-        </select>
+        <input type="text" name="name" placeholder="Full Name *" required>
+
+<input type="tel" name="phone" placeholder="Phone Number *" required>
+
+<input type="email" name="email" placeholder="Email Address">
+
+<input type="text" name="suburb" placeholder="Suburb *" required>
+
+<select name="service" required>
+
+  <option value="" disabled selected>What do you need help with?</option>
+
+  <option>Emergency Electrician</option>
+
+  <option>Level 2 Electrical Work</option>
+
+  <option>Switchboard Upgrade</option>
+
+  <option>EV Charger Installation</option>
+
+  <option>Lighting & Downlights</option>
+
+  <option>Power Points & Switches</option>
+
+  <option>Smoke Alarm Installation</option>
+
+  <option>Safety Switch Installation</option>
+
+  <option>Rewiring</option>
+
+  <option>General Electrical Work</option>
+
+</select>
+
+<select name="contact_time">
+
+  <option value="" disabled selected>Preferred contact time</option>
+
+  <option>Anytime</option>
+
+  <option>Morning (8am–12pm)</option>
+
+  <option>Afternoon (12pm–5pm)</option>
+
+  <option>Evening (5pm–8pm)</option>
+
+</select>
         <textarea name="message" placeholder="Briefly describe the job (optional)" rows="2"></textarea>
         <input type="text" name="_gotcha" class="honeypot">
         <button type="submit">Get My Free Quote →</button>
